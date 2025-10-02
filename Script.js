@@ -2,6 +2,34 @@ const sidebar = document.getElementById('sidebar');
         const overlay = document.getElementById('overlay');
         const openMenuBtn = document.getElementById('openMenu');
         const closeMenuBtn = document.getElementById('closeMenu');
+        const toggleBtn = document.getElementById('toggleSidebar');
+        const mainContent = document.getElementById('mainContent');
+        const navAegis = document.getElementById('nav-aegis');
+        const navStartup = document.getElementById('nav-startup');
+        const navBilling = document.getElementById('nav-billing');
+        const navAnalytical = document.getElementById('nav-analytical');
+
+        // Toggle sidebar on desktop
+        toggleBtn.addEventListener('click', function() {
+            sidebar.classList.toggle('collapsed');
+            mainContent.classList.toggle('collapsed');
+        });
+        navAegis.addEventListener('click', function() {
+            sidebar.classList.remove('collapsed');
+            mainContent.classList.remove('collapsed');
+        });
+        navStartup.addEventListener('click', function() {
+            sidebar.classList.remove('collapsed');
+            mainContent.classList.remove('collapsed');
+        });
+        navBilling.addEventListener('click', function() {
+             sidebar.classList.remove('collapsed');
+            mainContent.classList.remove('collapsed');
+        });
+        navAnalytical.addEventListener('click', function() {
+             sidebar.classList.remove('collapsed');
+            mainContent.classList.remove('collapsed');
+        });
 
         function openMenu() {
             sidebar.classList.add('mobile-visible');
